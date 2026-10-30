@@ -1,0 +1,70 @@
+VIDEO SCRIPT (matches EV_Market_Project_Final.pdf)   About 9 minutes
+Open the PDF full screen (F11). Scroll to each section as you read. Pause between sections.
+
+------------------------------------------------------------
+1. COVER (0:00 - 0:40)
+Hello, my name is Nilamber Singh Hada. This is my SmartBridge Skill Wallet project on data analytics with Tableau.
+The topic is Global Electric Vehicle Market Analysis. I used Python and SQL for the database, Tableau for the
+visualizations, and Flask to show the dashboard and story on a website. On this first page you can see my GitHub link,
+my Tableau dashboard link and my Tableau story link.
+
+2. SECTION 1 - PROBLEM UNDERSTANDING (0:40 - 1:30)
+Electric vehicles are becoming popular, but they are hard to compare. They differ in price, range, battery type,
+charging time and sales. The problem is that buyers, manufacturers and planners cannot easily see which vehicles sell
+the most, what drives the price, and which battery lasts longest. My objectives were to measure the market by category,
+manufacturer and region, to compare battery technologies, and to show the results in a Tableau dashboard and story.
+
+3. SECTION 2 - DATASET (1:30 - 2:20)
+The dataset was provided by Skill Wallet. It has 100,000 rows and 37 columns. Each row is one electric vehicle model.
+The model years are from 2018 to 2026. The columns include price, range, battery type, charging time, annual sales and
+CO2 saved. A few columns have missing values, for example customer rating and resale value, but each is under 3.1 percent.
+I left them blank so that averages ignore them. The data is synthetic, so some patterns are very even.
+
+4. SECTIONS 3 AND 4 - DATABASE AND SQL (2:20 - 4:00)
+I loaded the CSV file into a database table called ev_market using Python and pandas. It stores 100,000 rows. I used a
+SQLite database, and the repository also has MySQL versions of the scripts.
+(Figure 1)  Here you can see that 100,000 rows were stored, with 200 manufacturers and 15 categories.
+(Figure 2)  This query shows the top 10 manufacturers by sales. SurgeWorks is first with about 4.88 million units.
+(Figure 3)  This query shows sales and average price by category. Two-wheeler scooters sell the most, with about 85
+            million units, and electric buses are the most expensive.
+(Figure 4)  This query compares battery technologies. Solid-State batteries last longest, with 2,999 charge cycles and
+            the lowest degradation, 7.36 percent. LFP is second.
+(Figures 5 and 6)  These queries show regions and years. The regions and years are very even, because the data is synthetic.
+
+5. SECTION 5 - TABLEAU CONNECTION AND PREPARATION (4:00 - 5:00)
+I connected the dataset to Tableau Public. For data preparation, I left missing values blank, set a map role for the
+manufacturing country, and used a Top N filter for the 200 manufacturers. I created calculated fields such as Price
+Segment, Range Class, Fast Charge Rating, Range per 1000 dollars, Estimated Revenue and Sales Share. I also added six
+filters: model year, market region, category, battery type, price segment and manufacturer.
+
+6. SECTION 6 - VISUALIZATIONS (5:00 - 5:50)
+I built 12 visualizations: sales by category, sales by year, top manufacturers, a country map, average price by region,
+battery share, battery durability, price versus range, a drivetrain heat map, use cases, CO2 saved, and a customer rating
+histogram. These sample charts show the main patterns.
+
+7. SECTIONS 7 AND 8 - DASHBOARDS AND STORY (5:50 - 6:50)
+The dashboards combine these charts and use the same filters. The size is set to Automatic, so the layout fits different
+screens. The story has six scenes: market snapshot, who sells the most, price versus range, battery technology, regions
+and countries, and recommendations. Both are published on Tableau Public.
+
+8. SECTION 9 - FLASK WEBSITE (6:50 - 7:50)
+Finally, I embedded the Tableau dashboard and story in a Flask website. This is the home page. This is the dashboard page,
+with all the filters working. And this is the story page with the six scenes. The website runs on my computer at the
+address 127.0.0.1, port 5000.
+
+9. SECTIONS 10 AND 11 - PERFORMANCE AND INSIGHTS (7:50 - 9:00)
+For performance, the project uses 100,000 rows, 6 filters, 6 calculated fields and 12 visualizations. My key findings are
+these. Scooters, sedans and compact SUVs sell the most. Price follows battery size more than range. Solid-State and LFP
+batteries last longest. Charging time and range are almost the same for all battery types. And the market is balanced
+across regions and the top manufacturers.
+
+10. SECTION 12 - CONCLUSION (9:00 - 9:30)
+In conclusion, this project takes electric vehicle data from a CSV file into a database, analyses it with SQL, visualizes
+it in Tableau, and publishes it on a website. In the future, I would add real-world data, sales forecasting, and a direct
+MySQL connection in Tableau Desktop. Thank you for watching.
+
+------------------------------------------------------------
+TIPS
+- Take a breath between sections and scroll slowly.
+- If you make a small mistake, keep going. You can also record in 2 or 3 parts and join them in Clipchamp.
+- Make sure all 6 calculated fields and your filters really exist in Tableau before you say they do.
